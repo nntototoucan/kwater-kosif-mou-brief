@@ -212,6 +212,18 @@
     width: 26px; height: 26px; border-radius: 7px; background: var(--water); color: #fff;
     display: grid; place-items: center; font-size: 13px; font-weight: 800;
   }
+  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0 4px; }
+  @media (max-width: 640px) { .decision-grid { grid-template-columns: 1fr; } }
+  .decision-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px 16px; }
+  .decision-card.get { border-top-color: var(--kosif); }
+  .decision-card.give { border-top-color: var(--water); }
+  .decision-card .dc-head { margin-bottom: 10px; }
+  .decision-card ul.clean { margin: 8px 0 4px; }
+  .decision-card .note { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-faint); line-height: 1.5; }
+  .ref-divider { display: flex; align-items: center; gap: 12px; margin: 48px 0 8px; }
+  .ref-divider::before, .ref-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .ref-divider span { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; white-space: nowrap; }
+
   .callout-soft {
     background: var(--surface-2); border: 1px solid var(--line-soft);
     border-radius: var(--radius); padding: 14px 18px; margin: 14px 0;
@@ -230,6 +242,8 @@
   .hhead, details.hrow > summary {
     display: grid; grid-template-columns: 170px 1fr 92px 18px; gap: 14px; align-items: center; padding: 14px 18px;
   }
+  .hgrid.map5 .hhead, .hgrid.map5 details.hrow > summary { grid-template-columns: 96px 1fr 128px 18px; }
+  @media (max-width: 640px) { .hgrid.map5 .hhead { display: none; } }
   .hhead { background: var(--surface-2); border-bottom: 1px solid var(--line);
     font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
   details.hrow { border-top: 1px solid var(--line-soft); }
@@ -343,7 +357,7 @@
       <div><dt>당사자</dt><dd>K-water · KOSIF(CDP 한국 사무국)</dd></div>
       <div><dt>초점</dt><dd>물공시 &middot; CDP Water Security</dd></div>
       <div><dt>관점</dt><dd>수공이 얻는 실익</dd></div>
-      <div><dt>작성일</dt><dd class="num">2026.07.12</dd></div>
+      <div><dt>작성일</dt><dd class="num">2026.07.12 <span style="color:var(--ink-faint);font-weight:600;">(업데이트 07.13)</span></dd></div>
     </dl>
   </header>
 
@@ -355,6 +369,35 @@
       <p class="foot">이번 MoU의 프레이밍 핵심 &mdash; 기존 워터포지티브 협력의 연장이 아니라 <strong>‘국가 물공시 인프라 공동구축’</strong>으로 격상.</p>
     </div>
   </section>
+
+  <section id="s0b">
+    <div class="sec-head"><span class="sec-num">★</span><h2>MoU, KOSIF에게 왜 좋은가 <span style="color:var(--ink-faint);font-weight:600;font-size:.7em;">— 의사결정 요약</span></h2></div>
+    <p class="lead-in">결론에 필요한 건 이 카드 두 개뿐이다. <strong>아래 01~05는 이 결론을 뒷받침하는 참고자료</strong>(수공 현황·현안·근거 데이터).</p>
+    <div class="decision-grid">
+      <div class="decision-card get">
+        <div class="dc-head"><span class="pill k">KOSIF가 얻는 것</span></div>
+        <ul class="clean">
+          <li><strong>CDP Water Security 응답기업 확대</strong> — 수공이 삼성전자·SK하이닉스·LG전자·포스코 등 대기업을 CDP 응답으로 끌어오는 연결 채널</li>
+          <li><strong>SCM(공급망) 프로그램 가입 수익</strong> — 수공과 그 연결 대기업의 CDP Supply Chain 가입</li>
+          <li><strong>수공 자체 CDP WS 응답</strong> — 국가 물공급 기관이 '공급자 공시' 앵커로 참여 → 물공시 생태계에서 KOSIF의 상징성·입지 강화</li>
+          <li><strong>이미 쌓인 관계</strong> — 2024년부터 워터포지티브 협력체 운영, 2026 CDP 물안보 특별상 수상 → 백지 협상이 아니라 <em>제도화·격상</em></li>
+        </ul>
+      </div>
+      <div class="decision-card give">
+        <div class="dc-head"><span class="pill w">KOSIF가 수공에 주는 것</span></div>
+        <ul class="clean">
+          <li><strong>대외에 인용 가능한 공개 데이터 출처</strong> — 수공이 이미 아는 기업별 사용량을 기업 스스로 CDP에 공시하게 해 인용 가능하게 만들고, 수공이 모르는 미래 신·증설·감축목표 데이터까지 확보</li>
+          <li><strong>요금 현실화 명분</strong> — 산업용수 구간 '공급안정성 프리미엄' 신설을 위한 기업 자체 리스크공시 + 해외 동종업계 대비 국제 가격비교 근거</li>
+          <li><strong>미분양 산업용지 마케팅 표적 명단</strong> — 물 공급 리스크를 CDP에 자체 공시한 대형 수요기업 선별 리스트</li>
+          <li><strong>경영평가 정성점수 방어 재료</strong> — 물공시·CDP 활동 = 사회적가치 실적으로 인정</li>
+        </ul>
+        <p class="note">※ 자회사 일감몰아주기 논란·수변사업 미분양은 물공시로 <strong>해소되지 않는다</strong> — 위 항목은 완화·방어 수준이며, 과장하지 않는다.</p>
+      </div>
+    </div>
+    <div class="callout-soft" style="margin-top:16px;"><strong>역할 분담:</strong> 수공 = 공급측 물데이터 허브 / KOSIF = 수요측(기업) 공시 플랫폼 → 붙이면 <strong>한국 최초 물 수급 통합 공시체계</strong>. 이 명분이 수공 내부 결재선(용수공급 리스크 관리 + 국가 물안보 기여)을 통과시키는 논리.</div>
+  </section>
+
+  <div class="ref-divider"><span>아래는 참고자료 — 수공 현황 · 현안 · 근거 데이터</span></div>
 
   <section id="s1">
     <div class="sec-head"><span class="sec-num">01</span><h2>전제 — 이미 둘은 파트너다</h2></div>
@@ -407,11 +450,11 @@
           <span class="c-chev"><span class="chev"></span></span>
         </summary>
         <div class="hrow-body">
-          <p class="rlead">반도체·AI 등 첨단산업이 <strong>초순수 등 막대한 용수</strong>를 요구하는데, 기존 농업·생활용수 중심 물관리로는 감당이 어렵습니다. 수공은 전담 TF와 <strong>원·정수부터 초순수까지 한 번에 공급</strong>하는 최초의 통합물공급 모델로 대응 중이지만, <strong>수요 자체가 불확실</strong>해 공급계획 리스크가 큽니다.</p>
+          <p class="rlead">반도체·AI 등 첨단산업이 <strong>초순수 등 막대한 용수</strong>를 요구하는데, 기존 농업·생활용수 중심 물관리로는 감당이 어렵습니다. 용인 국가산단은 2025년 5월부터 <strong>통합용수공급사업 1단계 설계</strong>에 착수(2026.11 완료 목표, 총사업비 2.2조원)해 2031년 1월 일 31만톤 공급을 시작, 2034년까지 일 107.2만톤 체제를 완성할 계획입니다. 서남권(호남) 클러스터는 2026년 6월 정부가 기존 댐 여유량·증고·하수 재이용을 총동원한 <strong>일 65만톤 공급 로드맵</strong>을 발표했지만, 여러 기관 조정에 의존하고 있어 <strong>수요·공급 모두 불확실성</strong>이 남아 있습니다.</p>
           <div class="stat-row">
-            <div class="stat"><div class="v">107만<span style="font-size:14px;font-weight:700;">톤/일</span></div><div class="l">용인 국가산단 필요 용수<br>(팔당+화천댐 동원)</div></div>
-            <div class="stat"><div class="v">65만<span style="font-size:14px;font-weight:700;">톤/일</span></div><div class="l">서남권 반도체<br>클러스터 공업용수</div></div>
-            <div class="stat"><div class="v">최초</div><div class="l">SK하이닉스 초순수<br>통합공급 모델</div></div>
+            <div class="stat"><div class="v">107.2만<span style="font-size:14px;font-weight:700;">톤/일</span></div><div class="l">용인 국가산단 최종목표<br>(2034년, 총사업비 2.2조원)</div></div>
+            <div class="stat"><div class="v">31만<span style="font-size:14px;font-weight:700;">톤/일</span></div><div class="l">용인 1단계 공급개시<br>(2031년 1월 목표)</div></div>
+            <div class="stat"><div class="v">65만<span style="font-size:14px;font-weight:700;">톤/일</span></div><div class="l">서남권 클러스터<br>공급계획(2026.6 로드맵)</div></div>
           </div>
           <div class="callout-soft" style="margin-top:16px;">→ <strong>연결고리:</strong> 기업이 CDP에 물 사용·리스크를 공시하면 수공이 이 <strong>수요를 정교하게 예측</strong>할 수 있음 (05번 매핑 ① 데이터).</div>
         </div>
@@ -458,7 +501,7 @@
       <details class="explain">
         <summary><span class="chev"></span>Q2. 원가는 왜 자꾸 오르나? → 전기료가 범인</summary>
         <div class="explain-body">
-          <p class="first">물을 정수하고 높은 곳까지 <strong>퍼 올리려면 전기가 대량</strong>으로 듭니다. 그 <strong>전력수도료가 4년 새 1.75배</strong>로 뛰며 원가를 밀어올렸습니다. 그런데 <strong>요금(판매가)은 2016년 이후 9년째 동결</strong> — 원가는 오르는데 가격은 묶여 있으니 2022년부터 역전돼 적자로 돌아섰습니다.</p>
+          <p class="first">물을 정수하고 높은 곳까지 <strong>퍼 올리려면 전기가 대량</strong>으로 듭니다. 그 <strong>전력수도료가 4년 새 1.75배</strong>로 뛰며 원가를 밀어올렸습니다. 그런데 <strong>요금(판매가)은 2016년 이후 10년째 동결</strong> — 원가는 오르는데 가격은 묶여 있으니 2022년부터 역전돼 적자로 돌아섰습니다. 2026년 현재까지도 <strong>전면 동결은 그대로</strong>이며, 대신 산업용수 구간에 한해 별도 요금 신설을 검토할 명분이 쌓이는 단계입니다(05번 매핑 ② 참고).</p>
 
           <figure class="fig">
             <div class="fig-title">전력수도료 — 4년 만에 1.75배</div>
@@ -573,6 +616,7 @@
               </tbody>
             </table>
           </div>
+          <div class="callout-soft" style="margin-top:16px;">2026년 기준 송산그린시티 서측지구는 조성공사 <strong>입찰 진행 중</strong>(공사기간 108개월)이고, 선도지구(대보건설, 2023.12 착공)도 <strong>2031년 12월 준공 목표</strong> — 수공이 목표했던 2026년 서측 분양 개시는 <strong>사실상 달성이 어려운 상황</strong>입니다. 입주는 1단계 2030~2033년, 2단계 2033~2036년, 3단계 2036~2039년으로 장기화. (호재는 서해선 KTX 2026.3.31 개통 예정으로 교통여건은 개선됩니다.)</div>
         </div>
       </details>
         </div>
@@ -580,13 +624,31 @@
 
       <details class="hrow">
         <summary>
+          <span class="c-name">안전·중대재해 리스크</span>
+          <span class="c-desc">2024년 운문댐 잠수사 2명 사망 → 2026년 4월 사장 중대재해처벌법 위반 혐의 입건</span>
+          <span class="c-sev sev hi">★★★</span>
+          <span class="c-chev"><span class="chev"></span></span>
+        </summary>
+        <div class="hrow-body">
+          <p class="rlead">2024년 6월 청도 <strong>운문댐 취수탑 내진보강 공사</strong> 중 잠수사 2명이 취수구에 빨려들어 사망했습니다(같은 장소에서 2021년에도 잠수사 1명 사망 이력). 2026년 4월 대구지방고용노동청이 <strong>윤석대 사장과 당시 운문지구장을 중대재해처벌법·산업안전보건법 위반 혐의로 입건</strong>했고, 경북경찰청은 현장감리자·건설사 관리자를 업무상과실치사 혐의로 검찰에 송치했습니다. 수공은 "턴키 방식이라 시공사가 전 과정을 담당해 발주처가 아니다"라는 입장이지만, 중대재해처벌법 시행 이후 수공에서는 <strong>5건의 사고로 7명이 사망·12명이 부상</strong>했고 전부 현 사장 취임 이후 발생했습니다.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v bad">5건</div><div class="l">중대재해처벌법 시행 이후<br>사고 건수(현 사장 취임 후)</div></div>
+            <div class="stat"><div class="v bad">7명</div><div class="l">동일 기간<br>누적 사망자</div></div>
+            <div class="stat"><div class="v">2026.4</div><div class="l">사장 중대재해처벌법<br>위반 혐의 입건 시점</div></div>
+          </div>
+          <div class="callout-soft" style="margin-top:16px;">→ 물공시로 직접 해소되지 않는 리스크입니다 — 05번 매핑 ④ 평판(경영평가 정성점수 방어 수준) 참고.</div>
+        </div>
+      </details>
+
+      <details class="hrow">
+        <summary>
           <span class="c-name">자회사 일감몰아주기</span>
-          <span class="c-desc">케이워터기술 수의계약 100%, 공정위 예비조사 → 거버넌스·평판 리스크</span>
+          <span class="c-desc">케이워터기술 수의계약 100%, 업계 인력 대량 흡수 → 공정위 예비조사</span>
           <span class="c-sev sev mid">★★</span>
           <span class="c-chev"><span class="chev"></span></span>
         </summary>
         <div class="hrow-body">
-          <p class="rlead">수공 자회사 <strong>케이워터기술</strong>이 받은 일감이 <strong>2년 새 4.7배</strong>로 급증했는데 <strong>전부 수의계약(100%)</strong>이라, 공정위가 ‘부당지원’ 여부를 예비조사 중입니다. 국가 물안보 리더십 이미지에 흠집을 내는 <strong>거버넌스 리스크</strong>.</p>
+          <p class="rlead">수공 자회사 <strong>케이워터기술</strong>이 받은 일감이 <strong>2년 새 4.7배</strong>로 급증했는데 <strong>전부 수의계약(100%)</strong>이라, 공정위가 '사업활동방해'·'부당지원행위' 두 갈래로 예비 검토 중입니다(2026년 7월 기준 결론 미도출). 케이워터기술은 설립(2021년) 1년 내 <strong>업계 전체 기술 인력의 80% 이상을 경력채용으로 흡수</strong>했습니다 — 주요 민간업체 기준 A사 88.3%(566명 중 500명), B사 71.0%, C사 77.9%, D사 62.8% 이탈. 시장 규모는 댐·광역수도 분야 연 1000억원대. 수공은 "정규직화 정책에 따른 것"이라 반박합니다.</p>
           <figure class="fig">
             <div class="fig-title">케이워터기술 수의계약 규모 (100% 수의계약)</div>
             <div class="compare">
@@ -607,7 +669,7 @@
           <span class="c-chev"><span class="chev"></span></span>
         </summary>
         <div class="hrow-body">
-          <p class="rlead">2050년까지 <strong>온실가스 780만톤 감축</strong>을 목표로 <strong>4대 전략</strong>(탄소 zero 물관리 · 물에너지 확대 · 그린수소 · 흡수원 조성)을 추진합니다. 동시에 기후변화로 <strong>홍수와 가뭄이 함께 심해지는</strong> 양극화가 물관리 난이도를 높이고 있습니다. 물-에너지 넥서스 공시로 CDP와 간접 연계 가능.</p>
+          <p class="rlead">2050년까지 <strong>온실가스 780만톤 감축</strong>을 목표로 <strong>4대 전략</strong>(탄소 zero 물관리 · 물에너지 확대 · 그린수소 · 흡수원 조성)을 추진합니다. 2020년 <strong>공공기관 최초로 RE100을 선언</strong>했고, 2026년 5월에는 CDP(글로벌 RE100 공식 인증기관)로부터 <strong>국내 최초 글로벌 RE100 인증</strong>을 획득 — 현재 재생에너지 설비 1.5GW를 2030년까지 10GW로 확대할 계획입니다. 동시에 기후변화로 <strong>홍수와 가뭄이 함께 심해지는</strong> 양극화가 물관리 난이도를 높이고 있습니다. 물-에너지 넥서스 공시로 CDP와 간접 연계 가능.</p>
         </div>
       </details>
 
@@ -619,7 +681,7 @@
           <span class="c-chev"><span class="chev"></span></span>
         </summary>
         <div class="hrow-body">
-          <p class="rlead">회사 <strong>전체 재무 총량은 오히려 개선</strong>됐습니다. 다만 앞의 <strong>요금 적자·수변사업 적자</strong> 같은 개별 사업 손실이 발목을 잡는 구조 — 총량이 아니라 <strong>사업별 수익성</strong>이 진짜 숙제입니다.</p>
+          <p class="rlead">회사 <strong>전체 재무 총량은 오히려 개선</strong>됐습니다. 부채비율은 <strong>2022년 115.4% → 2023년 101.5% → 2024년 98.4%로 3년 연속 개선</strong> 중입니다(부채 대부분은 4대강 사업 관련, 약 12조원대 유지). 다만 앞의 <strong>요금 적자·수변사업 적자</strong> 같은 개별 사업 손실이 발목을 잡는 구조 — 총량이 아니라 <strong>사업별 수익성</strong>이 진짜 숙제입니다.</p>
           <div class="stat-row">
             <div class="stat"><div class="v">98.4%</div><div class="l">부채비율<br>(2019년 167% → 2024년)</div></div>
             <div class="stat"><div class="v">36.3%</div><div class="l">차입금의존도<br>(2019년 51.5% →)</div></div>
@@ -628,49 +690,70 @@
       </details>
 
     </div>
-    <div class="callout-soft" style="margin-top:16px;">경영평가 A등급은 마이너. 진짜 아픈 건 <strong>①용수 수요 불확실성 · ②원가 이하 요금 · ③수변사업 적자</strong>.</div>
+    <div class="callout-soft" style="margin-top:16px;">2025년도 경영평가는 <strong>B등급(양호)</strong>으로 전년 C등급에서 상승했지만, 같은 해 중대재해 발생기관으로 지정돼 기관장 경고 조치도 함께 받았습니다 — 마냥 좋은 성적표는 아닙니다. 진짜 아픈 건 <strong>①용수 수요 불확실성 · ②원가 이하 요금 · ③수변사업 적자 · ④안전·중대재해 거버넌스</strong>.</div>
   </section>
 
   <section id="s5">
     <div class="sec-head"><span class="sec-num">05</span><h2>물공시가 각 현안을 어떻게 긁어주나 <span style="color:var(--ink-faint);font-weight:600;font-size:.7em;">— 핵심 매핑</span></h2></div>
     <p class="lead-in">공통 원리: 수공은 정책·데이터·자금·영업을 <strong>혼자선 못 움직인다.</strong> 물공시가 만든 시장 압력이 이를 우회 해결한다.</p>
-    <div class="table-scroll">
-      <table>
-        <thead><tr><th></th><th>수공이 못 하던 것</th><th>물공시/CDP가 대신 해주는 것</th><th>해결 현안</th></tr></thead>
-        <tbody>
-          <tr><td class="tag-num">① 데이터</td><td>기업별 <strong>현재</strong> 물 사용량은 요금 청구로 이미 정확히 파악 — 다만 <strong>영업비밀(정보공개법 §9①7호)·통계비밀(통계법 §33)</strong>이라 대외 인용·공개 불가, 기업의 <strong>미래 신·증설 계획·감축목표</strong>는 애초에 모름</td><td>기업이 CDP에 <strong>자발 공시</strong> → 같은 값이라도 <strong>대외에 인용 가능한 공개 출처</strong> 확보 + 청구 데이터엔 없는 <strong>미래 수요·리스크 목표치</strong>로 전망 보완</td><td>용수 수요 불확실성 (전망·인용 근거)</td></tr>
-          <tr><td class="tag-num">② 명분</td><td>원가 이하 요금 9년 동결 — 그러나 <strong>가정용 전면 인상은 물가 여론 때문에 정치적으로 경직</strong></td><td>반도체 등 대형 산업수요 기업이 CDP에 <strong>가뭄·공급중단을 Major 리스크로 자체 공시</strong> + 사업장별 물비용 데이터로 <strong>해외 동종업계 대비 국제 가격비교</strong> 확보 → 가정용은 유지한 채 <strong>산업용수 구간 '공급안정성 프리미엄' 신설</strong> 명분</td><td>요금 적자 (산업용부터)</td></tr>
-          <tr><td class="tag-num">③ 판로</td><td>수변사업 산업용지 미분양(구미 HTV·부산 EDC 등) — 살 대형 수요기업을 스스로 찾기 어려움</td><td>CDP 응답기업 중 <strong>신·증설을 검토 중인 대형 물수요 기업</strong>(반도체 등)을 확인 → 미분양 산업용지의 <strong>잠재 매수처로 연결</strong> (적자 전액 해소는 아니고, 미분양 축소를 통한 손실 완화)</td><td>수변사업 적자 (미분양분)</td></tr>
-          <tr><td class="tag-num">④ 평판</td><td>자회사(케이워터기술) 일감몰아주기 논란으로 흠집난 거버넌스 — 물공시로 논란 자체가 없어지진 않음</td><td>물공시·CDP 참여 같은 <strong>사회적가치 실적</strong>은 공공기관 경영평가 정성평가에 우호적으로 반영돼 <strong>총점 방어</strong>에는 기여 (논란 자체의 해소는 아님)</td><td>경영평가 점수 방어</td></tr>
-        </tbody>
-      </table>
+    <p class="hint-line">아래 <strong>항목을 누르면</strong> 구체적 메커니즘이 펼쳐집니다. 색은 연결 강도 — <span style="color:var(--water);font-weight:700;">진함=직접 해결</span>, <span style="color:var(--ink-faint);font-weight:700;">옅음=보조·방어 효과</span>.</p>
+    <div class="hgrid map5">
+      <div class="hhead"><span>항목</span><span>물공시가 실제로 하는 일</span><span>해결 현안</span><span></span></div>
+
+      <details class="hrow">
+        <summary>
+          <span class="c-name">① 데이터</span>
+          <span class="c-desc">이미 아는 데이터, CDP는 '공개 출처' 역할만 추가</span>
+          <span class="c-sev sev hi">수요 불확실성</span>
+          <span class="c-chev"><span class="chev"></span></span>
+        </summary>
+        <div class="hrow-body">
+          <p class="rlead">기업별 <strong>현재</strong> 물 사용량은 요금 청구로 이미 정확히 파악하고 있다. 다만 <strong>영업비밀(정보공개법 §9①7호)·통계비밀(통계법 §33)</strong> 때문에 이 데이터를 대외에 인용·공개하지 못하고, 기업의 <strong>미래 신·증설 계획·감축목표</strong> 같은 정보는 애초에 알 방법이 없다. 기업이 CDP에 자발 공시하면 <strong>같은 값이라도 대외에 인용 가능한 공개 출처</strong>가 되고, 청구 데이터엔 없는 <strong>미래 수요·리스크 목표치</strong>가 더해져 전망을 보완한다 — 물공시의 가치는 '새 데이터 확보'가 아니라 <strong>'공개 가능성 + 미래치 보완'</strong>이다.</p>
+        </div>
+      </details>
+
+      <details class="hrow">
+        <summary>
+          <span class="c-name">② 명분</span>
+          <span class="c-desc">전면 인상 대신 산업용수 구간만 프리미엄 신설</span>
+          <span class="c-sev sev hi">요금 적자</span>
+          <span class="c-chev"><span class="chev"></span></span>
+        </summary>
+        <div class="hrow-body">
+          <p class="rlead">원가 이하 요금이 9년째 동결이지만, <strong>가정용 포함 전면 인상은 물가 여론 때문에 정치적으로 경직</strong>돼 있다. 게다가 광역상수도 요금은 04번에서 본 대로 <strong>용도(생활·공업)가 아니라 수종(원수·정수)</strong>으로 매겨져 있어 산업용수만 콕 집어 올리기도 제도적으로 어렵다. 반도체 등 CDP 응답 대기업은 이미 <strong>가뭄·공급중단을 Major 리스크로 자체 공시</strong>하고 있고, CDP의 사업장별 물비용 데이터를 모으면 <strong>한국 산업용수 가격이 해외 동종업계 대비 낮다</strong>는 국제 비교 근거도 확보된다. 이 두 데이터를 근거로 가정용 요금은 유지한 채 <strong>대형 산업 수요자 한정 '공급안정성 프리미엄'을 국토부에 신설 제안</strong>하는 것이 현실적 경로다.</p>
+        </div>
+      </details>
+
+      <details class="hrow">
+        <summary>
+          <span class="c-name">③ 판로</span>
+          <span class="c-desc">물 리스크 자체공시 기업 = 마케팅 표적 명단</span>
+          <span class="c-sev sev mid">수변사업 적자</span>
+          <span class="c-chev"><span class="chev"></span></span>
+        </summary>
+        <div class="hrow-body">
+          <p class="rlead">구미 HTV·부산 EDC 등 수변사업 산업용지가 <strong>미분양</strong>인데, 수공은 이걸 마케팅할 표적 명단이 없다. CDP <strong>W4(리스크) 응답에서 물 공급 안정성을 사업상 중대 리스크로 자체 명시한 기업</strong>을 선별하면 "수공이 용수를 책임지는 산업단지"로 <strong>표적 마케팅할 명단</strong>이 생긴다. 다만 CDP가 기업의 신·증설 계획을 알려주는 건 아니다 — 물에 민감한 잠재수요를 걸러내는 용도일 뿐, <strong>적자 해소가 아니라 영업 단계 지원</strong>으로 봐야 한다.</p>
+        </div>
+      </details>
+
+      <details class="hrow">
+        <summary>
+          <span class="c-name">④ 평판</span>
+          <span class="c-desc">논란은 못 지움 — 경영평가 점수만 방어</span>
+          <span class="c-sev sev lo">경영평가 방어</span>
+          <span class="c-chev"><span class="chev"></span></span>
+        </summary>
+        <div class="hrow-body">
+          <p class="rlead">자회사(케이워터기술) 일감몰아주기 논란은 <strong>물공시로 없어지지 않는다.</strong> 다만 물공시·CDP 참여 같은 <strong>사회적가치 실적</strong>은 공공기관 경영평가 정성평가에서 우호적으로 반영돼 <strong>총점 방어</strong>에는 쓸 수 있다. 이건 논란의 '해결'이 아니라 '완충'이라는 걸 분명히 해야 한다.</p>
+        </div>
+      </details>
+
     </div>
-    <div class="callout-soft"><strong>데이터 공개 논점 확정:</strong> 수공은 기업별 실사용량을 <em>이미 요금 청구로 알고 있지만</em>, 이를 <strong>정보공개법 §9①7호</strong>(법인의 경영·영업상 비밀)와 <strong>통계법 §33</strong>(통계 비밀 보호) 때문에 대외에 <em>인용·공개는 못 한다</em>. CDP는 <strong>기업이 스스로 공개</strong>하므로 같은 값이라도 <em>대외 인용이 가능</em>해지고, 여기에 수공 청구 데이터엔 없는 <em>기업의 미래 신·증설 계획·리스크 목표</em>가 더해진다 → 물공시의 가치는 <em>새 데이터 확보</em>가 아니라 <em>공개 가능성 + 미래치 보완</em>.</div>
-    <div class="callout-soft" style="margin-top:12px;"><strong>요금 현실화 논점 확정:</strong> 수공이 국토부에 <em>가정용 포함 전면 요금 인상</em>을 요청하는 건 물가 여론 때문에 정치적으로 막혀 있고, 현재 광역상수도 요금은 04번에서 본 대로 <em>용도(생활·공업)가 아니라 수종(원수·정수)</em>으로 매겨져 있어 산업용수만 콕 집어 올리기도 제도적으로 어렵다. 물공시가 여는 길은 전면 인상이 아니라 <strong>신규 항목 신설</strong>이다 — 반도체 등 CDP 응답 대기업은 이미 가뭄·공급중단을 <strong>Major 리스크로 자체 공시</strong>하고 있고, CDP의 사업장별 물비용 데이터를 모으면 <strong>한국 산업용수 가격이 해외 동종업계 대비 낮다</strong>는 국제 비교 근거도 확보된다. 이 두 데이터를 근거로 가정용 요금은 유지한 채 <strong>대형 산업 수요자 한정 '공급안정성 프리미엄'을 국토부에 신설 제안</strong>하는 것이 현실적 경로다.</div>
-    <div class="callout-soft" style="margin-top:12px;color:var(--ink-faint);font-size:13px;">※ 04번 현안 중 <strong>탄소중립·기후위기</strong>는 물공시와 간접 연계(물-에너지 넥서스 공시)는 있으나 직접적 해결 메커니즘이 약해 이 표에서 제외했다. 모든 현안을 물공시로 풀 수 있다고 주장하지 않는다.</div>
+    <div class="callout-soft" style="margin-top:16px;color:var(--ink-faint);font-size:13px;">※ 04번 현안 중 <strong>탄소중립·기후위기</strong>는 물공시와 간접 연계(물-에너지 넥서스 공시)는 있으나 직접적 해결 메커니즘이 약해 이 표에서 제외했다. 모든 현안을 물공시로 풀 수 있다고 주장하지 않는다.</div>
   </section>
 
   <section id="s6">
-    <div class="sec-head"><span class="sec-num">06</span><h2>윈윈 구조</h2></div>
-    <div class="legend">
-      <span class="chip"><span class="dot w"></span>K-water(수공)</span>
-      <span class="chip"><span class="dot k"></span>KOSIF</span>
-    </div>
-    <div class="table-scroll">
-      <table>
-        <thead><tr><th></th><th><span class="pill k">KOSIF</span> 얻는 것 (명확)</th><th><span class="pill w">수공</span> 얻는 것 (이번에 채울 것)</th></tr></thead>
-        <tbody>
-          <tr><td>응답기업 수</td><td>CDP WS 응답기업 증가 (수공이 대기업 연결)</td><td>그 기업 물데이터 = 수요예측 자산</td></tr>
-          <tr><td>SCM 수익</td><td>수공·연결 대기업 SCM 가입 수익</td><td>공급망 물리스크 선제 관리</td></tr>
-          <tr><td>직접 참여</td><td>수공 자체 CDP WS 응답 → 상징성</td><td>‘공급자 공시’로 물공시 생태계 앵커 지위</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="callout-soft"><strong>역할 분담:</strong> 수공 = <em>공급측 물데이터 허브</em> / KOSIF = <em>수요측(기업) 공시 플랫폼</em> → 둘을 붙이면 <strong>한국 최초 물 수급 통합 공시체계</strong>. 이 명분이 수공 내부 결재선(용수공급 리스크 관리 + 국가 물안보 기여)을 통과시키는 논리.</div>
-  </section>
-
-  <section id="s7">
-    <div class="sec-head"><span class="sec-num">07</span><h2>MoU 설득 핵심 메시지 (수공용)</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>MoU 설득 핵심 메시지 (수공용)</h2></div>
     <ol class="msg">
       <li>“물공시는 수공에게 데이터·명분·자금·고객·평판을 동시에 연다” — 워터포지티브의 확장이 아니라 경영 현안 해결 수단.</li>
       <li>“기업이 스스로 낸 물데이터로, 수공은 반도체 용수공급을 정교하게 계획하고 요금 현실화 명분을 얻는다.”</li>
@@ -695,6 +778,12 @@
       <a href="https://www.businesspost.co.kr/BP?command=article_view&num=332596">비즈니스포스트(KoSIF 인터뷰)</a>
       <a href="http://www.impacton.net/news/articleView.html?idxno=18871">임팩트온(물리스크 77%)</a>
       <a href="https://www.kosif.org/bbs/board.php?bo_table=s5_1&wr_id=104">2024 CDP 한국보고서(KOSIF)</a>
+      <a href="https://www.khan.co.kr/en/article/202605211355027/">경향신문(운문댐 사장 입건)</a>
+      <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156689277">정책브리핑(용인 반도체 용수공급 사업)</a>
+      <a href="https://www.asiatoday.co.kr/kn/view.php?key=20260629010010229">아시아투데이(서남권 용수 로드맵)</a>
+      <a href="https://www.newspim.com/news/view/20260619000730">뉴스핌(2026 공공기관 경영평가)</a>
+      <a href="https://v.daum.net/v/20250821172826056">다음뉴스(케이워터기술 인력흡수)</a>
+      <a href="https://www.g-enews.com/article/General-News/2026/01/202601231342312921a9fc143920_1">글로벌이코노믹(부채비율·정수장 민간위탁)</a>
     </div>
   </footer>
 
